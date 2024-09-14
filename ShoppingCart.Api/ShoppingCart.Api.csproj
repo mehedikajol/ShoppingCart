@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<ItemGroup>
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\ShoppingCart.Orders.Presentation\ShoppingCart.Orders.Presentation.csproj" />
+	  <ProjectReference Include="..\ShoppingCart.Products.Presentation\ShoppingCart.Products.Presentation.csproj" />
+	  <ProjectReference Include="..\ShoppingCart.Users.Presentation\ShoppingCart.Users.Presentation.csproj" />
+	</ItemGroup>
+
+</Project>
