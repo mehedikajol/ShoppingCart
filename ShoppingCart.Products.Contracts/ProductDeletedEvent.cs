@@ -2,5 +2,5 @@
 
 namespace ShoppingCart.Products.Contracts
 {
-    public record ProductRemovedEvent(Guid Id) : IEvent;
+    public record ProductDeletedEvent(Guid Id) : IEvent;
 }

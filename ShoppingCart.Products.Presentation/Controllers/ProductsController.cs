@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace ShoppingCart.Products.Presentation.Controllers;
 
 [ApiController]
-[Route("products")]
+[Route("api/[controller]")]
 public class ProductsController : ControllerBase
 {
     private readonly ILogger<ProductsController> _logger;

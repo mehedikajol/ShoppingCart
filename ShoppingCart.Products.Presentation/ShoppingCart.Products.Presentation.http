@@ -1,6 +1,0 @@
-@ShoppingCart.Products.Presentation_HostAddress = http://localhost:5003
-
-GET {{ShoppingCart.Products.Presentation_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###

@@ -28,7 +28,7 @@ internal class MediatREventDispatcher : IEventDispatcher
         throw new NotImplementedException();
     }
 
-    private void Publish<T>(T @event) where T : IEvent
+    public void Publish(IEvent @event)
     {
         Task.Run(() => _publisher.Publish(@event)).Forget();
     }

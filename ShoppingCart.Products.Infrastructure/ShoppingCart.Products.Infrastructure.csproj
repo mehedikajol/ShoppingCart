@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ShoppingCart.Products.Application\ShoppingCart.Products.Application.csproj" />
+    <ProjectReference Include="..\ShoppingCart.Products.Contracts\ShoppingCart.Products.Contracts.csproj" />
+    <ProjectReference Include="..\ShoppingCart.SharedKernel\ShoppingCart.SharedKernel.csproj" />
+  </ItemGroup>
+
+</Project>
