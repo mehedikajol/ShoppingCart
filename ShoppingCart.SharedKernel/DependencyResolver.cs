@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using ShoppingCart.SharedKerel.Entities;
-using ShoppingCart.SharedKerel.Events;
 using ShoppingCart.SharedKerel.Repositories;
+using ShoppingCart.SharedKernel.Events;
 
 namespace OnlineShop.SharedKernel;
 
@@ -15,7 +15,7 @@ public static class DependencyResolver
             config.RegisterServicesFromAssembly(typeof(DependencyResolver).Assembly);
         });
 
-        services.AddScoped<IEventPublisher, EventPublisher>();
+        services.AddScoped<IEventDispatcher, MediatREventDispatcher>();
 
         return services;
     }

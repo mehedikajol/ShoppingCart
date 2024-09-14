@@ -1,6 +1,4 @@
-﻿using ShoppingCart.SharedKerel.Events;
-
-namespace ShoppingCart.SharedKernel.Events;
+﻿namespace ShoppingCart.SharedKernel.Events;
 
 public interface IHaveDomainEvents
 {

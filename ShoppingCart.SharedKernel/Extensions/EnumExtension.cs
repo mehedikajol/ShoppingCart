@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using ShoppingCart.SharedKernel.Exceptions;
+using System.ComponentModel;
 
 namespace ShoppingCart.SharedKerel.Extensions;
 
@@ -38,7 +39,7 @@ public static class EnumExtension
             }
         }
 
-        throw new ArgumentException("Provided value not found.");
+        throw new EnumException("Provided value not found.");
         // Or return default(T);
     }
 }

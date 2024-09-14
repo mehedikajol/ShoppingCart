@@ -1,13 +1,13 @@
 ﻿using MediatR;
 using ShoppingCart.SharedKerel.Extensions;
 
-namespace ShoppingCart.SharedKerel.Events;
+namespace ShoppingCart.SharedKernel.Events;
 
-internal class EventPublisher : IEventPublisher
+internal class MediatREventDispatcher : IEventDispatcher
 {
     private readonly IPublisher _publisher;
 
-    public EventPublisher(IPublisher publisher)
+    public MediatREventDispatcher(IPublisher publisher)
     {
         _publisher = publisher;
     }
@@ -17,7 +17,7 @@ internal class EventPublisher : IEventPublisher
         foreach (var entity in entitiesWithDomainEvents)
         {
             var events = entity.DomainEvents.ToArray();
-            entity.ClearDoaminEvents();
+            entity.ClearDomainEvents();
 
             foreach (var @event in events)
             {
