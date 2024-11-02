@@ -1,4 +1,7 @@
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using ShoppingCart.Products.Application.Interfaces;
+using ShoppingCart.Products.Application.UseCases.Products.CreateProduct;
 
 namespace ShoppingCart.Products.Presentation.Controllers;
 
@@ -7,15 +10,27 @@ namespace ShoppingCart.Products.Presentation.Controllers;
 public class ProductsController : ControllerBase
 {
     private readonly ILogger<ProductsController> _logger;
+    private readonly ISender _sender;
 
-    public ProductsController(ILogger<ProductsController> logger)
+    public ProductsController(ILogger<ProductsController> logger, ISender sender)
     {
         _logger = logger;
+        _sender = sender;
     }
 
     [HttpGet]
-    public IActionResult Get()
+    public async Task<IActionResult> Get()
     {
-        return Ok("From products module");
+        await Task.Delay(10);
+        // var response = await _productService.GetAllProductsAsync();
+        return Ok("response");
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> Create([FromBody] CreateProductCommand command)
+    {
+        await Task.Delay(10);
+        // var response = await _productService.GetAllProductsAsync();
+        return Ok("response");
     }
 }
